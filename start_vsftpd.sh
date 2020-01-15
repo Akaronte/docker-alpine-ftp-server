@@ -49,6 +49,7 @@ fi
 
 if [ ! -z "$ADDRESS" ]; then
   ADDR_OPT="-opasv_address=$ADDRESS"
+  echo $IP $ADDRESS >> /etc/hosts
   #cp /etc/hosts /tmp/hosts
   #sed -i "s/localhost/ localhost ${ADDRESS}/g" /tmp/hosts
   #cat /tmp/hosts > /etc/hosts
