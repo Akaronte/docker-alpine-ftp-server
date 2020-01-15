@@ -44,11 +44,12 @@ if [ -z "$MIN_PORT" ]; then
 fi
 
 if [ -z "$MAX_PORT" ]; then
-  MAX_PORT=21010
+  MAX_PORT=21004
 fi
 
 if [ ! -z "$ADDRESS" ]; then
   ADDR_OPT="-opasv_address=$ADDRESS"
+  sed -e "s/localhost/ localhost ${ADDRESS}/" /etc/hosts
 fi
 
 # Used to run custom commands inside container
