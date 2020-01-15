@@ -49,7 +49,9 @@ fi
 
 if [ ! -z "$ADDRESS" ]; then
   ADDR_OPT="-opasv_address=$ADDRESS"
-  sed -e "s/localhost/ localhost ${ADDRESS}/" /etc/hosts
+  #cp /etc/hosts /tmp/hosts
+  #sed -i "s/localhost/ localhost ${ADDRESS}/g" /tmp/hosts
+  #cat /tmp/hosts > /etc/hosts
 fi
 
 # Used to run custom commands inside container
