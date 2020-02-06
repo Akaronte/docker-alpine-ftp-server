@@ -6,7 +6,7 @@ Small and flexible docker image with vsftpd server
 ```
 docker run --name ftp -d -p 21:21 -p 21000-21004:21000-21004 \
 -e USERS="User1|Password|/ftp/User1 User2|Password|/ftp/User2" \
--e ADDRESS=kluster.tk -e ip=192.168.1.245 akaronte/alpine-ftp
+-e ADDRESS=kluster.tk -e IP=192.168.1.245 akaronte/alpine-ftp
 ```
 
 ## Configuration
@@ -17,7 +17,7 @@ Environment variables:
 - `ADDRESS` - external address witch clients can connect passive ports 
 - `IP` - The ip public of external resolution ADDRESS
 - `MIN_PORT` - minamal port number may be used for passive connections (optional, default `21000`)
-- `MAX_PORT` - maximal port number may be used for passive connections (optional, default `21010`)
+- `MAX_PORT` - maximal port number may be used for passive connections (optional, default `21004`)
 
 ## USERS examples
 
